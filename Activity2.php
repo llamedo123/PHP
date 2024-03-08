@@ -31,9 +31,20 @@ the sum of all the numbers in the array. (Without Using Built-in Function) -->
     <title>Document</title>
 </head>
 <body>
+    <form action="" method="post">
     <label for="sumArray">Input Your Array Numbers:</label>
     <input type="text" name="array" id="array">
 
     <button type="submit">Calculate All</button>
+    </form>
+ 
+    <?php if(isset($result)):?>
+        <div class="array"><p>
+            This Array
+            <?php echo $input; ?>
+            has a total of:
+            <?php echo $result; ?>
+    </p></div>
+    <?php endif; ?>
 </body>
 </html>
