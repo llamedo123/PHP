@@ -15,7 +15,11 @@ the sum of all the numbers in the array. (Without Using Built-in Function) -->
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-        
+        $input = $_POST['array'];
+        $array = explode(",", $input);
+        $array = array_map("trim", $array);
+        $array = array_map("intval", $array);
+        $result = sumArray($array);
     }
 ?>
 
